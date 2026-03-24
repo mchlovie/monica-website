@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Monica C. Gordora</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#d8f5d0);
+color:#444;
+overflow-x:hidden;
+}
+
+/* floating hearts */
+
+.heart{
+position:fixed;
+bottom:-10px;
+color:#ff6fa5;
+font-size:20px;
+animation:float 8s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-100vh);}
+}
+
+header{
+text-align:center;
+padding:40px;
+}
+
+h1{
+font-family:'Pacifico', cursive;
+color:#ff6fa5;
+font-size:42px;
+}
+
+.container{
+width:90%;
+max-width:900px;
+margin:auto;
+}
+
+.profile{
+text-align:center;
+}
+
+.profile img{
+width:220px;
+border-radius:50%;
+border:6px solid #ffd6e7;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card{
+background:white;
+padding:25px;
+margin:30px 0;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card h2{
+color:#ff6fa5;
+}
+
+.hobbies span{
+background:#d8f5d0;
+padding:10px 15px;
+margin:5px;
+border-radius:15px;
+display:inline-block;
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:200px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.1) rotate(4deg);
+}
+
+.social{
+text-align:center;
+margin-top:20px;
+}
+
+.social a{
+background:#ff6fa5;
+color:white;
+padding:12px 25px;
+border-radius:25px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.social a:hover{
+background:#ff8db8;
+}
+
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Monica C. Gordora</h1>
+<p>Bachelor of Science in Nursing 🌸</p>
+</header>
+
+<div class="container">
+
+<div class="profile">
+<img src="monica.jpg">
+</div>
+
+<div class="card">
+<h2>About Me</h2>
+
+<p>
+Hi! I'm Monica. I love watching K-dramas, travelling to new places, and enjoying my favorite comfort foods. I also enjoy cute aesthetic things like matcha drinks and takoyaki.
+</p>
+
+</div>
+
+<div class="card">
+<h2>My Hobbies</h2>
+
+<div class="hobbies">
+<span>🎬 Watching K-drama</span>
+<span>✈️ Travelling</span>
+<span>🍜 Eating Comfort Foods</span>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Favorite Music</h2>
+<p>🎵 Be Like a Woman</p>
+</div>
+
+<div class="card">
+<h2>My Favorite Foods</h2>
+
+<div class="gallery">
+<img src="takoyaki.jpg">
+<img src="matcha.jpg">
+</div>
+
+</div>
+
+<div class="social">
+<a href="https://www.instagram.com/mchloviec.g/" target="_blank">
+Visit My Instagram 💗
+</a>
+</div>
+
+</div>
+
+<footer>
+Made with 💗 by Monica
+</footer>
+
+<script>
+
+/* floating hearts generator */
+
+setInterval(function(){
+
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="💗";
+
+heart.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+},500);
+
+</script>
+
+</body>
+</html>
